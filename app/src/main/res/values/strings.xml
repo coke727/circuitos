@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="teoria">Ejemplo de Texto</string>
+    <string name="teoria2">Ejemplo de Texto 2</string>
+    <string name="teoria3">Ejemplo de Texto 3</string>
+</resources>
