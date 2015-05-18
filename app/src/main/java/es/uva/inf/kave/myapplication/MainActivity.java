@@ -82,18 +82,6 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         actionBar.addTab(inicio);
         actionBar.addTab(simlador);
         actionBar.addTab(teoria);
-
-        // For each of the sections in the app, add a tab to the action bar.
-        /*for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
-            // Create a tab with text corresponding to the page title defined by
-            // the adapter. Also specify this Activity object, which implements
-            // the TabListener interface, as the callback (listener) for when
-            // this tab is selected.
-            actionBar.addTab(
-                    actionBar.newTab()
-                            .setText(mSectionsPagerAdapter.getPageTitle(i))
-                            .setTabListener(this));
-        }*/
     }
 
 
@@ -119,7 +107,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
+    @Override //TODO probar a crear un onTabClick o algo asi que nos haga esto mismo
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
         // When the given tab is selected, switch to the corresponding page in
         // the ViewPager.
@@ -195,13 +183,6 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 
         public PlaceholderFragment() {
         }
-
-        /*@Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            return rootView;
-        }*/
     }
 
 }
