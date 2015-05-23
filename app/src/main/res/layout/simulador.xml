@@ -11,126 +11,133 @@
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:id="@+id/imgCircuito"
-            android:layout_gravity="center_horizontal"
-            android:adjustViewBounds="false"
-            android:src="@drawable/imc_circuito"
-            android:contentDescription="@string/alt_circuito" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Resistencias"
-            android:id="@+id/textView" />
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView">
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:id="@+id/resistencias">
+            android:layout_height="match_parent">
 
-            <EditText
-                android:layout_width="115dp"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:ems="10"
-                android:id="@+id/r1"
-                android:text="r1" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:id="@+id/imgCircuito"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="false"
+                android:src="@drawable/imc_circuito"
+                android:contentDescription="@string/alt_circuito" />
 
-            <EditText
-                android:layout_width="115dp"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:ems="10"
-                android:id="@+id/r2"
-                android:text="r2" />
-
-            <EditText
-                android:layout_width="115dp"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:ems="10"
-                android:id="@+id/r3"
-                android:text="r3" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Fuentes"
-            android:id="@+id/textView2" />
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:id="@+id/fuetes">
-
-            <EditText
-                android:layout_width="115dp"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:ems="10"
-                android:id="@+id/v1"
-                android:text="v1" />
-
-            <EditText
-                android:layout_width="115dp"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:ems="10"
-                android:id="@+id/v2"
-                android:text="v2" />
-
-            <EditText
-                android:layout_width="115dp"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:ems="10"
-                android:id="@+id/v3"
-                android:text="v3" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/botones">
-
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tomar Medida"
-                android:id="@+id/medir" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Resistencias"
+                android:id="@+id/textView" />
 
-            <Button
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/resistencias">
+
+                <EditText
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/r1"
+                    android:text="r1" />
+
+                <EditText
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/r2"
+                    android:text="r2" />
+
+                <EditText
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/r3"
+                    android:text="r3" />
+            </LinearLayout>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Deshacer Medida"
-                android:id="@+id/deshacer" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Fuentes"
+                android:id="@+id/textView2" />
 
-            <Button
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/fuetes">
+
+                <EditText
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/v1"
+                    android:text="v1" />
+
+                <EditText
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/v2"
+                    android:text="v2" />
+
+                <EditText
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/v3"
+                    android:text="v3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Clear"
-                android:id="@+id/limpiar" />
+                android:id="@+id/botones">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tomar Medida"
+                    android:id="@+id/Medir" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deshacer Medida"
+                    android:id="@+id/deshacer" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear"
+                    android:id="@+id/limpiar" />
+            </LinearLayout>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:id="@+id/listaMedidas" />
+
         </LinearLayout>
 
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="88dp"
-            android:id="@+id/listaMedidas" />
-
-    </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
