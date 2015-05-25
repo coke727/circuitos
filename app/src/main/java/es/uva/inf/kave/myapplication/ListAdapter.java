@@ -2,6 +2,7 @@ package es.uva.inf.kave.myapplication;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,7 @@ public class ListAdapter extends ArrayAdapter<Datos> {
     int layoutResourceId;
     ArrayList<Datos> datos;
 
-    public ListAdapter(Context context, int layoutResourceId, ArrayList<Datos> datos) {
+    public ListAdapter(FragmentActivity context, int layoutResourceId, ArrayList<Datos> datos) {
         super(context, layoutResourceId, datos);
         this.layoutResourceId = layoutResourceId;
         this.context = context;
@@ -31,15 +32,15 @@ public class ListAdapter extends ArrayAdapter<Datos> {
         if(row == null)
         {
             LayoutInflater inflater = ((Activity)context).getLayoutInflater();
-            row = inflater.inflate(layoutResourceId, parent, false);
+            row = inflater.inflate(layoutResourceId, null);
 
             holder = new DatosHolder();
-            holder.v1 = (TextView) row.findViewById(R.id.v1);
-            holder.v2 = (TextView) row.findViewById(R.id.v2);
-            holder.v3 = (TextView) row.findViewById(R.id.v3);
-            holder.r1 = (TextView) row.findViewById(R.id.r1);
-            holder.r2 = (TextView) row.findViewById(R.id.r2);
-            holder.r3 = (TextView) row.findViewById(R.id.r3);
+            holder.v1 = (TextView) row.findViewById(R.id.tv1);
+            holder.v2 = (TextView) row.findViewById(R.id.tv2);
+            holder.v3 = (TextView) row.findViewById(R.id.tv3);
+            holder.r1 = (TextView) row.findViewById(R.id.tr1);
+            holder.r2 = (TextView) row.findViewById(R.id.tr2);
+            holder.r3 = (TextView) row.findViewById(R.id.tr3);
 
             row.setTag(holder);
         }
@@ -50,12 +51,12 @@ public class ListAdapter extends ArrayAdapter<Datos> {
 
         Datos fila = datos.get(position);
 
-        holder.v1.setText(Double.toString(fila.getV1()));
-        holder.v2.setText(Double.toString(fila.getV2()));
-        holder.v3.setText(Double.toString(fila.getV3()));
-        holder.r1.setText(Double.toString(fila.getR1()));
-        holder.r2.setText(Double.toString(fila.getR2()));
-        holder.r3.setText(Double.toString(fila.getR3()));
+        holder.v1.setText(fila.getV1());
+        holder.v2.setText(fila.getV2());
+        holder.v3.setText(fila.getV3());
+        holder.r1.setText(fila.getR1());
+        holder.r2.setText(fila.getR2());
+        holder.r3.setText(fila.getR3());
 
         return row;
     }
