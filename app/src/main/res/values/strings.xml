@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Simulador de Circuitos</string>
 
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section1">Principal</string>
+    <string name="title_section2">Teoria</string>
+    <string name="title_section3">Simulador</string>
 
     <string name="hello_world">Hello world!</string>
 

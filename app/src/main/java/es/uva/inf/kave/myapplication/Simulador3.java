@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import es.uva.inf.kave.myapplication.Auxiliares.Datos;
 import es.uva.inf.kave.myapplication.Auxiliares.ListAdapter;
 
-public class Simulador extends Fragment{
+public class Simulador3 extends Fragment{
 
     private String r1, r2, r3, v1, v2, v3;
     private Button medir;
@@ -37,7 +37,7 @@ public class Simulador extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.simulador_ej1, container, false);
+        View rootView = inflater.inflate(R.layout.simulador_ej3, container, false);
 
         medir = (Button) rootView.findViewById(R.id.Medir);
         deshacer = (Button) rootView.findViewById(R.id.deshacer);

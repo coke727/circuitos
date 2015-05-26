@@ -14,7 +14,7 @@ import java.util.Locale;
 import es.uva.inf.kave.myapplication.Auxiliares.TabListener;
 
 
-public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
+public class Activity_Ejercicio2 extends ActionBarActivity implements ActionBar.TabListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -35,12 +35,12 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
     ActionBar.Tab inicio, teoria, simlador;
     android.support.v4.app.Fragment inicioTab = new Inicio();
     android.support.v4.app.Fragment teoriaTab = new Teoria();
-    android.support.v4.app.Fragment simuladorTab = new Simulador();
+    android.support.v4.app.Fragment simuladorTab = new Simulador2();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.simulador_ej2);
 
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
@@ -167,11 +167,11 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         public static Fragment newInstance(int sectionNumber) {
             Fragment fragment;
             if(sectionNumber==1){
-                fragment = new Inicio();
+                fragment = new Inicio2();
             }else if(sectionNumber==2){
-                fragment = new Teoria();
+                fragment = new Teoria2();
             }else{
-               fragment = new Simulador();
+                fragment = new Simulador2();
             }
             return fragment;
         }
