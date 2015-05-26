@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.ScrollView;
 
 import java.util.ArrayList;
 
@@ -24,6 +25,7 @@ public class Simulador extends Fragment{
     private Button deshacer;
     private Button limpiar;
     private ListView listaMedidas;
+    private ScrollView scroll;
 
     ArrayList<Datos> tabla;
     ListAdapter adapter;
@@ -35,19 +37,12 @@ public class Simulador extends Fragment{
 
         View rootView = inflater.inflate(R.layout.simulador, container, false);
 
-        /*r1 = ((EditText) rootView.findViewById(R.id.r1)).getText().toString();
-        r2 = ((EditText) rootView.findViewById(R.id.r2)).getText().toString();
-        r3 = ((EditText) rootView.findViewById(R.id.r3)).getText().toString();
-        v1 = ((EditText) rootView.findViewById(R.id.v1)).getText().toString();
-        v2 = ((EditText) rootView.findViewById(R.id.v2)).getText().toString();
-        v3 = ((EditText) rootView.findViewById(R.id.v3)).getText().toString();*/
-
         medir = (Button) rootView.findViewById(R.id.Medir);
         deshacer = (Button) rootView.findViewById(R.id.deshacer);
         limpiar = (Button) rootView.findViewById(R.id.limpiar);
+        scroll = (ScrollView) rootView.findViewById(R.id.scrollView);
 
         tabla = new ArrayList<Datos>();
-        //tabla.add(new Datos("1","1","1","1","1","1"));
         adapter = new ListAdapter(getActivity(), R.layout.row, tabla);
 
         medir.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +58,7 @@ public class Simulador extends Fragment{
                 Datos fila = new Datos(r1,r2,r3,v1,v2,v3);
                 tabla.add(fila);
                 adapter.notifyDataSetChanged();
+                scroll.computeScroll();
             }
         });
 
