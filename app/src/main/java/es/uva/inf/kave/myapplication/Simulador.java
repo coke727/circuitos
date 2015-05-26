@@ -4,9 +4,8 @@ package es.uva.inf.kave.myapplication;
  * Created by coke on 12/05/15.
  */
 
-import es.uva.inf.kave.myapplication.Datos;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +16,10 @@ import android.widget.ListView;
 import android.widget.ScrollView;
 
 import java.util.ArrayList;
+
+import es.uva.inf.kave.myapplication.Auxiliares.Datos;
+import es.uva.inf.kave.myapplication.Auxiliares.ListAdapter;
+import es.uva.inf.kave.myapplication.R;
 
 public class Simulador extends Fragment{
 

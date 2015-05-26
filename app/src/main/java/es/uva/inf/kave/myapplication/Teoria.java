@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import es.uva.inf.kave.myapplication.R;
+
 public class Teoria extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

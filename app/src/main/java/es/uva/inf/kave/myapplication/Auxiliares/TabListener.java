@@ -1,4 +1,4 @@
-package es.uva.inf.kave.myapplication;
+package es.uva.inf.kave.myapplication.Auxiliares;
 
 import android.app.ActionBar;
 import android.support.v4.app.Fragment;

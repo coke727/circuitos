@@ -123,15 +123,23 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Deshacer Medida"
-                    android:id="@+id/deshacer" />
+                    android:text="Deshacer"
+                    android:id="@+id/deshacer"
+                    android:layout_gravity="center_horizontal" />
 
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="Clear"
+                    android:text="Limpiar"
                     android:id="@+id/limpiar" />
             </LinearLayout>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Calcular Circuito"
+                android:id="@+id/calcular"
+                android:textAlignment="center" />
 
             <ListView
                 android:layout_width="match_parent"

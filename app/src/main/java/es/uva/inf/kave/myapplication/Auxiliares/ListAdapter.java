@@ -1,4 +1,4 @@
-package es.uva.inf.kave.myapplication;
+package es.uva.inf.kave.myapplication.Auxiliares;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,9 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import es.uva.inf.kave.myapplication.Auxiliares.Datos;
+import es.uva.inf.kave.myapplication.R;
 
 public class ListAdapter extends ArrayAdapter<Datos> {
 
