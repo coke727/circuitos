@@ -8,8 +8,6 @@ package es.uva.inf.kave.myapplication.Auxiliares;
 
     final double alfa = 0.0046;
 
-
-
     /**
      * Calcula la resitencia de un circuito electrico a partir de la Intensidad
      * y la diferencia de potencial

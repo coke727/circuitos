@@ -5,6 +5,8 @@ public class Datos {
 	private String v3;
 	private String v2;
 	private String v1;
+    private String r5;
+    private String r4;
 	private String r3;
 	private String r2;
 	private String r1;
@@ -17,6 +19,23 @@ public class Datos {
 		this.v2 = v2;
 		this.v3 = v3;
 	}
+
+    public Datos(String r1, String v1) {
+        this.r1 = r1;
+        this.v1 = v1;
+    }
+
+    public Datos(String r1, String r2, String r3, String r4, String r5, String v1, String v2) {
+        this.r1 = r1;
+        this.r2 = r2;
+        this.r3 = r3;
+        this.r2 = r4;
+        this.r3 = r5;
+        this.v1 = v1;
+        this.v2 = v2;
+        this.v3 = v3;
+    }
+
 
 	public String getV3() {
 		return v3;
@@ -41,4 +60,12 @@ public class Datos {
 	public String getR1() {
 		return r1;
 	}
+
+    public String getR4() {
+        return r4;
+    }
+
+    public String getR5() {
+        return r5;
+    }
 }

@@ -6,7 +6,6 @@ package es.uva.inf.kave.myapplication;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +17,7 @@ import android.widget.ScrollView;
 import java.util.ArrayList;
 
 import es.uva.inf.kave.myapplication.Auxiliares.Datos;
-import es.uva.inf.kave.myapplication.Auxiliares.ListAdapter;
+import es.uva.inf.kave.myapplication.Auxiliares.ListAdapter1;
 
 public class Simulador extends Fragment{
 
@@ -30,7 +29,7 @@ public class Simulador extends Fragment{
     private ScrollView scroll;
 
     ArrayList<Datos> tabla;
-    ListAdapter adapter;
+    ListAdapter1 adapter;
 
 
     @Override
@@ -45,19 +44,17 @@ public class Simulador extends Fragment{
         scroll = (ScrollView) rootView.findViewById(R.id.scrollView);
 
         tabla = new ArrayList<Datos>();
-        adapter = new ListAdapter(getActivity(), R.layout.row, tabla);
+        adapter = new ListAdapter1(getActivity(), R.layout.row2columnas, tabla);
 
         medir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 r1 = ((EditText) getView().findViewById(R.id.r1)).getText().toString();
-                r2 = ((EditText) getView().findViewById(R.id.r2)).getText().toString();
-                r3 = ((EditText) getView().findViewById(R.id.r3)).getText().toString();
+
                 v1 = ((EditText) getView().findViewById(R.id.v1)).getText().toString();
-                v2 = ((EditText) getView().findViewById(R.id.v2)).getText().toString();
-                v3 = ((EditText) getView().findViewById(R.id.v3)).getText().toString();
-                Log.i(r1,r2 + r3 + v1 + v2 + v3);
-                Datos fila = new Datos(r1,r2,r3,v1,v2,v3);
+
+
+                Datos fila = new Datos(r1,v1);
                 tabla.add(fila);
                 adapter.notifyDataSetChanged();
                 scroll.computeScroll();
@@ -78,11 +75,9 @@ public class Simulador extends Fragment{
             @Override
             public void onClick(View view) {
                 ((EditText) getView().findViewById(R.id.r1)).setText("");
-                ((EditText) getView().findViewById(R.id.r2)).setText("");
-                ((EditText) getView().findViewById(R.id.r3)).setText("");
+
                 ((EditText) getView().findViewById(R.id.v1)).setText("");
-                ((EditText) getView().findViewById(R.id.v2)).setText("");
-                ((EditText) getView().findViewById(R.id.v3)).setText("");
+
             }
         });
 
