@@ -18,7 +18,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Ejercicio 1"
-        android:id="@+id/button2"
+        android:id="@+id/ejercicio1"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:background="#ff14c8ff" />
@@ -27,7 +27,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Ejercicio 2"
-        android:id="@+id/button3"
+        android:id="@+id/ejercicio2"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:background="#ff14c8ff" />
@@ -36,7 +36,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Ejercicio 3"
-        android:id="@+id/button4"
+        android:id="@+id/ejercicio3"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:background="#ff14c8ff" />
@@ -45,7 +45,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Ejercicio 4"
-        android:id="@+id/button5"
+        android:id="@+id/ejercicio4"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:background="#ff14c8ff" />

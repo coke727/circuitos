@@ -14,7 +14,7 @@ import java.util.Locale;
 import es.uva.inf.kave.myapplication.Auxiliares.TabListener;
 
 
-public class Activity_Ejercicio2 extends ActionBarActivity implements ActionBar.TabListener {
+public class Activity_Ejercicio3 extends ActionBarActivity implements ActionBar.TabListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -24,7 +24,7 @@ public class Activity_Ejercicio2 extends ActionBarActivity implements ActionBar.
      * may be best to switch to a
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
-    SectionsPagerAdapter mSectionsPagerAdapter;
+    SectionsPagerAdapter3 mSectionsPagerAdapter;
 
     /**
      * The {@link ViewPager} that will host the section contents.
@@ -33,14 +33,14 @@ public class Activity_Ejercicio2 extends ActionBarActivity implements ActionBar.
 
     // Declaring our tabs and the corresponding fragments.
     ActionBar.Tab inicio, teoria, simlador;
-    android.support.v4.app.Fragment inicioTab = new Inicio2();
-    android.support.v4.app.Fragment teoriaTab = new Teoria2();
-    android.support.v4.app.Fragment simuladorTab = new Simulador2();
+    android.support.v4.app.Fragment inicioTab = new Inicio3();
+    android.support.v4.app.Fragment teoriaTab = new Teoria3();
+    android.support.v4.app.Fragment simuladorTab = new Simulador3();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ejercicio2);
+        setContentView(R.layout.activity_ejercicio3);
 
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
@@ -48,10 +48,10 @@ public class Activity_Ejercicio2 extends ActionBarActivity implements ActionBar.
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mSectionsPagerAdapter = new SectionsPagerAdapter3(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.pager2);
+        mViewPager = (ViewPager) findViewById(R.id.pager3);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         // When swiping between different sections, select the corresponding
@@ -122,9 +122,9 @@ public class Activity_Ejercicio2 extends ActionBarActivity implements ActionBar.
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
-    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+    public class SectionsPagerAdapter3 extends FragmentPagerAdapter {
 
-        public SectionsPagerAdapter(FragmentManager fm) {
+        public SectionsPagerAdapter3(FragmentManager fm) {
             super(fm);
         }
 
@@ -132,7 +132,7 @@ public class Activity_Ejercicio2 extends ActionBarActivity implements ActionBar.
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            return PlaceholderFragment3.newInstance(position + 1);
         }
 
         @Override
@@ -159,7 +159,7 @@ public class Activity_Ejercicio2 extends ActionBarActivity implements ActionBar.
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
+    public static class PlaceholderFragment3 extends Fragment {
         /**
          * Returns a new instance of this fragment for the given section
          * number.
@@ -167,16 +167,16 @@ public class Activity_Ejercicio2 extends ActionBarActivity implements ActionBar.
         public static Fragment newInstance(int sectionNumber) {
             Fragment fragment;
             if(sectionNumber==1){
-                fragment = new Inicio2();
+                fragment = new Inicio3();
             }else if(sectionNumber==2){
-                fragment = new Teoria2();
+                fragment = new Teoria3();
             }else{
-                fragment = new Simulador2();
+                fragment = new Simulador3();
             }
             return fragment;
         }
 
-        public PlaceholderFragment() {
+        public PlaceholderFragment3() {
         }
     }
 

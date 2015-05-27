@@ -16,6 +16,51 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Activity_Ejercicio1"
+            android:label="Ejercicio 1" >
+            <intent-filter>
+                <action android:name="ejercicio1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity_Ejercicio2"
+            android:label="Ejercicio 2" >
+            <intent-filter>
+                <action android:name="ejercicio2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity_Ejercicio3"
+            android:label="Ejercicio 3" >
+            <intent-filter>
+                <action android:name="ejercicio3" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity_Ejercicio4"
+            android:label="Ejercicio 4" >
+            <intent-filter>
+                <action android:name="ejercicio4" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity_teoria"
+            android:label="Teoria de Circuitos" >
+            <intent-filter>
+                <action android:name="teoria" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
