@@ -29,7 +29,7 @@
                 android:id="@+id/imgCircuito"
                 android:layout_gravity="center_horizontal"
                 android:adjustViewBounds="false"
-                android:src="@drawable/imc_circuito"
+                android:src="@drawable/prob2_1"
                 android:contentDescription="@string/alt_circuito" />
 
             <TextView
@@ -70,11 +70,34 @@
                     android:text="r3" />
             </LinearLayout>
 
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/resistencias2">
+
+                <EditText
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/r4"
+                    android:text="r4" />
+
+                <EditText
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/r5"
+                    android:text="r5" />
+            </LinearLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Fuentes"
+                android:text="Tensión e Intensidad"
                 android:id="@+id/textView2" />
 
             <LinearLayout
@@ -99,13 +122,6 @@
                     android:id="@+id/v2"
                     android:text="v2" />
 
-                <EditText
-                    android:layout_width="115dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/v3"
-                    android:text="v3" />
             </LinearLayout>
 
             <LinearLayout

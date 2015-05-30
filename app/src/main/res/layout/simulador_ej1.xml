@@ -29,7 +29,7 @@
                 android:id="@+id/imgCircuito"
                 android:layout_gravity="center_horizontal"
                 android:adjustViewBounds="false"
-                android:src="@drawable/imc_circuito"
+                android:src="@drawable/prob1_1"
                 android:contentDescription="@string/alt_circuito" />
 
             <TextView
@@ -53,21 +53,6 @@
                     android:id="@+id/r1"
                     android:text="r1" />
 
-                <EditText
-                    android:layout_width="115dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/r2"
-                    android:text="r2" />
-
-                <EditText
-                    android:layout_width="115dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/r3"
-                    android:text="r3" />
             </LinearLayout>
 
             <TextView
@@ -91,21 +76,6 @@
                     android:id="@+id/v1"
                     android:text="v1" />
 
-                <EditText
-                    android:layout_width="115dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/v2"
-                    android:text="v2" />
-
-                <EditText
-                    android:layout_width="115dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/v3"
-                    android:text="v3" />
             </LinearLayout>
 
             <LinearLayout

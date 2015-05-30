@@ -12,4 +12,50 @@
     <string name="teoria2">Ejemplo de Texto 2</string>
     <string name="teoria3">Ejemplo de Texto 3</string>
     <string name="alt_circuito">Esquema del circuito</string>
+    <string name="logouva">Logo Uva</string>
+    <string name="Nombre_problema">Enunciado de problema</string>
+    <string name="DescripcionProblema">Calcule el valor de una resistencia incógnita Rx a partir de
+        medidas de la corriente I que la atraviesa y la caída de potencial V entre sus extremos.
+</string>
+    <string name="DescripcionProblema1">Conecte dicha resistencia entre los puntos “a” y “b” según
+        de la figura. Varíe poco a poco la salida de tensión de la fuente de alimentación y vaya
+        tomando parejas de Figura 2 valores (V,I) con el voltímetro y el amperímetro. Debe tomar
+        como mínimo 10 pares de valores, aproximadamente cada 0.5 voltios y hasta que la caída de
+        tensión medida en el voltímetro sea de unos 5 voltios. Visualice la gráfica con los puntos
+        (V,I) y vea el valor de Rx que se obtiene a partir de la pendiente (obtenida mediante un
+        ajuste por mínimos cuadrados) de la recta obtenida.</string>
+
+    <string name="DescripcionProblema2">Sustituimos la resistencia R x por una asociación mixta
+        (serie y paralelo) formada conectando las cinco resistencias de valor conocido según la figura.\n
+        Introduzca los valores de las resistencias. Operando como en el apartado anterior obtenga
+        diez pares de valores (V,I). Observe la representación de dichos puntos y, como en el
+        apartado anterior, a partir de la pendiente de la gráfica obtenemos el valor de la
+        resistencia equivalente R ab del montaje.\n
+        Compare el valor obtenido con el que se calcula mediante las expresiones teóricas de la
+        resistencia equivalente.</string>
+
+    <string name="DescripcionProblema3">Sustituya el montaje anterior por una bombilla de
+        incandescencia.
+
+        Antes de conectar la fuente debe medir la resistencia del filamento de la bombilla a
+        temperatura ambiente. Para ello utilice un polímetro de los suministrados en la práctica.
+        Además debe anotar la temperatura del laboratorio a la cual se ha realizado la medida anterior.
+        Tras realizar estas medidas, anote parejas de valores (V,I) obtenidas variando la tensión de
+        la fuente.
+        La tensión no debe superar los 10 voltios para evitar que se dañe la bombilla. Debe medir
+        20 pares de valores (V,I) para poder analizar bien la dependencia entre ambas magnitudes.
+        Vea la gráfica V-I con los valores obtenidos.
+        Para la mayoría de los conductores metálicos la resistencia varía con la temperatura según la
+        expresión:\n
+        R = R0 (1 + α T )		(2)
+        donde R0 es el valor de la resistencia a 0 oC y α es una constante que depende del metal en
+        cuestión. En nuestro caso, para el wolframio, α = 0.0046 oC –1 .
+
+        A partir de la ecuación (2), calcule R0 utilizando el valor de R medido a la temperatura
+        ambiente al comenzar este apartado así como el valor de dicha temperatura ambiente.
+
+        Una vez obtenido R0 , calcule tanto el valor de la resistencia R del filamento (R=V/I) como
+        de su temperatura (ecuación 2), para diferentes puntos (V,I) obtenidos experimentalmente.
+    </string>
+
 </resources>
