@@ -33,7 +33,7 @@ public class Simulador2 extends Fragment{
     private ScrollView scroll;
     Intent intent;
 
-    ArrayList<Datos> tabla;
+    ArrayList<Datos> tabla, datos;
     ListAdapter1 adapter;
 
 
@@ -50,19 +50,24 @@ public class Simulador2 extends Fragment{
         scroll = (ScrollView) rootView.findViewById(R.id.scrollView);
 
         tabla = new ArrayList<Datos>();
+        datos = new ArrayList<Datos>();
         adapter = new ListAdapter1(getActivity(), R.layout.row2columnas, tabla);
 
         medir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                r1 = ((EditText) getView().findViewById(R.id.r1)).getText().toString();
-
+                r1 = ((EditText) getView().findViewById(R.id.r6)).getText().toString();
+                r2 = ((EditText) getView().findViewById(R.id.r2)).getText().toString();
+                r3 = ((EditText) getView().findViewById(R.id.r3)).getText().toString();
+                r4 = ((EditText) getView().findViewById(R.id.r4)).getText().toString();
+                r5 = ((EditText) getView().findViewById(R.id.r5)).getText().toString();
                 v1 = ((EditText) getView().findViewById(R.id.v1)).getText().toString();
-
-
+                v2 = ((EditText) getView().findViewById(R.id.r1)).getText().toString();
 
                 Datos fila = new Datos(r1, v1);
                 tabla.add(fila);
+                Datos muestra = new Datos(r1,r2,r3,r4,r5,v1,v2);
+                datos.add(muestra);
                 adapter.notifyDataSetChanged();
                 scroll.computeScroll();
             }
@@ -73,6 +78,7 @@ public class Simulador2 extends Fragment{
             public void onClick(View view) {
                 if(tabla.size()>0) {
                     tabla.remove(tabla.get(tabla.size() - 1));
+                    datos.remove(datos.get(tabla.size() - 1));
                     adapter.notifyDataSetChanged();
                 }
             }
@@ -82,9 +88,7 @@ public class Simulador2 extends Fragment{
             @Override
             public void onClick(View view) {
                 ((EditText) getView().findViewById(R.id.r1)).setText("");
-
                 ((EditText) getView().findViewById(R.id.v1)).setText("");
-
             }
         });
 
@@ -92,7 +96,7 @@ public class Simulador2 extends Fragment{
             @Override
             public void onClick(View view) {
                 Bundle extra = new Bundle();
-                extra.putSerializable("array",tabla);
+                extra.putSerializable("array",datos);
                 intent = new Intent(getActivity(),Activity_Resultado.class);
                 intent.putExtra("array", extra);
                 intent.putExtra("ejercicio", 2);

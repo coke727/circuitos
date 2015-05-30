@@ -60,8 +60,8 @@ public class Simulador4 extends Fragment{
                 v2 = ((EditText) getView().findViewById(R.id.v2)).getText().toString();
                 v3 = ((EditText) getView().findViewById(R.id.v3)).getText().toString();
                 Log.i(r1,r2 + r3 + v1 + v2 + v3);
-                Datos fila = new Datos(r1,r2,r3,v1,v2,v3);
-                tabla.add(fila);
+                //Datos fila = new Datos(r1,r2,r3,v1,v2,v3);
+                //tabla.add(fila);
                 adapter.notifyDataSetChanged();
                 scroll.computeScroll();
             }

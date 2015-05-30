@@ -23,7 +23,7 @@ import es.uva.inf.kave.myapplication.Auxiliares.ListAdapter;
 
 public class Simulador3 extends Fragment{
 
-    private String r1, r2, r3, v1, v2, v3;
+    private String r1, r2, v1, v2;
     private Button medir;
     private Button deshacer;
     private Button limpiar, calcular;
@@ -55,12 +55,9 @@ public class Simulador3 extends Fragment{
             public void onClick(View view) {
                 r1 = ((EditText) getView().findViewById(R.id.r1)).getText().toString();
                 r2 = ((EditText) getView().findViewById(R.id.r2)).getText().toString();
-                r3 = ((EditText) getView().findViewById(R.id.r3)).getText().toString();
                 v1 = ((EditText) getView().findViewById(R.id.v1)).getText().toString();
                 v2 = ((EditText) getView().findViewById(R.id.v2)).getText().toString();
-                v3 = ((EditText) getView().findViewById(R.id.v3)).getText().toString();
-                Log.i(r1,r2 + r3 + v1 + v2 + v3);
-                Datos fila = new Datos(r1,r2,r3,v1,v2,v3);
+                Datos fila = new Datos(r1,r2,v1,v2);
                 tabla.add(fila);
                 adapter.notifyDataSetChanged();
                 scroll.computeScroll();
@@ -82,10 +79,8 @@ public class Simulador3 extends Fragment{
             public void onClick(View view) {
                 ((EditText) getView().findViewById(R.id.r1)).setText("");
                 ((EditText) getView().findViewById(R.id.r2)).setText("");
-                ((EditText) getView().findViewById(R.id.r3)).setText("");
                 ((EditText) getView().findViewById(R.id.v1)).setText("");
                 ((EditText) getView().findViewById(R.id.v2)).setText("");
-                ((EditText) getView().findViewById(R.id.v3)).setText("");
             }
         });
 
