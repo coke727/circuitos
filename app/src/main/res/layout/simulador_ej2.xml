@@ -6,7 +6,8 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity$PlaceholderFragment"
     android:id="@+id/teoria"
-    android:nestedScrollingEnabled="true">
+    android:nestedScrollingEnabled="true"
+    android:background="#ffffffff">
 
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -50,8 +51,8 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
                     android:ems="10"
-                    android:id="@+id/r1"
-                    android:text="r1" />
+                    android:id="@+id/r6"
+                    android:hint="R1" />
 
                 <EditText
                     android:layout_width="115dp"
@@ -59,7 +60,7 @@
                     android:inputType="numberDecimal"
                     android:ems="10"
                     android:id="@+id/r2"
-                    android:text="r2" />
+                    android:hint="R2" />
 
                 <EditText
                     android:layout_width="115dp"
@@ -67,7 +68,7 @@
                     android:inputType="numberDecimal"
                     android:ems="10"
                     android:id="@+id/r3"
-                    android:text="r3" />
+                    android:hint="R3" />
             </LinearLayout>
 
             <LinearLayout
@@ -82,7 +83,7 @@
                     android:inputType="numberDecimal"
                     android:ems="10"
                     android:id="@+id/r4"
-                    android:text="r4" />
+                    android:hint="R4" />
 
                 <EditText
                     android:layout_width="115dp"
@@ -90,7 +91,7 @@
                     android:inputType="numberDecimal"
                     android:ems="10"
                     android:id="@+id/r5"
-                    android:text="r5" />
+                    android:hint="R5" />
             </LinearLayout>
 
             <TextView
@@ -112,15 +113,15 @@
                     android:inputType="numberDecimal"
                     android:ems="10"
                     android:id="@+id/v1"
-                    android:text="v1" />
+                    android:hint="V1" />
 
                 <EditText
                     android:layout_width="115dp"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
                     android:ems="10"
-                    android:id="@+id/v2"
-                    android:text="v2" />
+                    android:id="@+id/r1"
+                    android:hint="A1" />
 
             </LinearLayout>
 

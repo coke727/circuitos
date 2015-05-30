@@ -4,6 +4,7 @@ package es.uva.inf.kave.myapplication;
  * Created by coke on 12/05/15.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -27,8 +28,10 @@ public class Simulador2 extends Fragment{
     private Button medir;
     private Button deshacer;
     private Button limpiar;
+    private Button calcular;
     private ListView listaMedidas;
     private ScrollView scroll;
+    Intent intent;
 
     ArrayList<Datos> tabla;
     ListAdapter1 adapter;
@@ -43,6 +46,7 @@ public class Simulador2 extends Fragment{
         medir = (Button) rootView.findViewById(R.id.Medir);
         deshacer = (Button) rootView.findViewById(R.id.deshacer);
         limpiar = (Button) rootView.findViewById(R.id.limpiar);
+        calcular = (Button) rootView.findViewById(R.id.calcular);
         scroll = (ScrollView) rootView.findViewById(R.id.scrollView);
 
         tabla = new ArrayList<Datos>();
@@ -81,6 +85,18 @@ public class Simulador2 extends Fragment{
 
                 ((EditText) getView().findViewById(R.id.v1)).setText("");
 
+            }
+        });
+
+        calcular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle extra = new Bundle();
+                extra.putSerializable("array",tabla);
+                intent = new Intent(getActivity(),Activity_Ejercicio1.class);
+                intent.putExtra("array", extra);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
             }
         });
 
