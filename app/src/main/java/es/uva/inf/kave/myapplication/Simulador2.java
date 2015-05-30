@@ -93,8 +93,9 @@ public class Simulador2 extends Fragment{
             public void onClick(View view) {
                 Bundle extra = new Bundle();
                 extra.putSerializable("array",tabla);
-                intent = new Intent(getActivity(),Activity_Ejercicio1.class);
+                intent = new Intent(getActivity(),Activity_Resultado.class);
                 intent.putExtra("array", extra);
+                intent.putExtra("ejercicio", 2);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }

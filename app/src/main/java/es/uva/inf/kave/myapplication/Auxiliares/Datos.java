@@ -1,15 +1,11 @@
 package es.uva.inf.kave.myapplication.Auxiliares;
 
-public class Datos {
+import java.io.Serializable;
 
-	private String v3;
-	private String v2;
-	private String v1;
-    private String r5;
-    private String r4;
-	private String r3;
-	private String r2;
-	private String r1;
+public class Datos implements Serializable {
+
+	private String v3,v2,v1;
+    private String r5,r4,r3,r2,r1;
 
 	public Datos(String r1, String r2, String r3, String v1, String v2, String v3) {
 		this.r1 = r1;
@@ -33,7 +29,6 @@ public class Datos {
         this.r3 = r5;
         this.v1 = v1;
         this.v2 = v2;
-        this.v3 = v3;
     }
 
 
@@ -68,4 +63,12 @@ public class Datos {
     public String getR5() {
         return r5;
     }
+
+	public Double getDoubleV1() {
+		return Double.parseDouble(v1);
+	}
+
+	public Double getDoubleR1() {
+		return Double.parseDouble(r1);
+	}
 }

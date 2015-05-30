@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Recta de Regresion:"
-        android:id="@+id/textView11"
+        android:id="@+id/encabezado"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp" />
 
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Pendiente = "
-            android:id="@+id/textView9"
+            android:id="@+id/campo1"
             android:layout_marginLeft="35dp" />
 
         <TextView
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Error Pendiente ="
-            android:id="@+id/textView10"
+            android:id="@+id/campo2"
             android:layout_marginLeft="35dp" />
 
         <TextView
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Ordenada en el Origen = "
-            android:id="@+id/textView12"
+            android:id="@+id/campo3"
             android:layout_marginLeft="35dp" />
 
         <TextView
@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Error Ordenada Origen ="
-            android:id="@+id/textView13"
+            android:id="@+id/campo4"
             android:layout_marginLeft="35dp" />
 
         <TextView
@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Coeficiente de Correlación ="
-            android:id="@+id/textView14"
+            android:id="@+id/campo5"
             android:layout_marginLeft="35dp" />
 
         <TextView
@@ -125,7 +125,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Valor de la Resistencia:"
-        android:id="@+id/textView15"
+        android:id="@+id/encabezado1"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp" />
@@ -140,7 +140,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Rx = "
-            android:id="@+id/textView16"
+            android:id="@+id/asig1"
             android:layout_marginLeft="35dp"
             android:layout_marginRight="5dp" />
 
@@ -169,8 +169,63 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="(Ohm)"
-            android:id="@+id/textView20"
+            android:text="Ω"
+            android:id="@+id/ohm1"
+            android:layout_marginLeft="5dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Cálculo Teórico de la R Equivalente:"
+        android:id="@+id/encabezado2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Rteo = "
+            android:id="@+id/asig2"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/rteo1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="±"
+            android:id="@+id/mas2"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/rteo2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Ω"
+            android:id="@+id/ohm2"
             android:layout_marginLeft="5dp" />
     </LinearLayout>
 
