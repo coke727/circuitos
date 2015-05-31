@@ -95,10 +95,8 @@ public class Simulador2 extends Fragment{
         calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bundle extra = new Bundle();
-                extra.putSerializable("array",datos);
                 intent = new Intent(getActivity(),Activity_Resultado.class);
-                intent.putExtra("array", extra);
+                intent.putExtra("array", tabla);
                 intent.putExtra("ejercicio", 2);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);

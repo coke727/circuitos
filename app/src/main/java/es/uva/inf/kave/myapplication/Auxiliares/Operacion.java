@@ -2,7 +2,6 @@ package es.uva.inf.kave.myapplication.Auxiliares;
 
 
 import java.util.ArrayList;
-import org.apache.commons.*;
 /**
  * Deficion de pracitica de fisica sobre Leh de Ohm.
  */
@@ -103,8 +102,6 @@ import org.apache.commons.*;
 
         return error;
     }
-
-    public static
 
 
 }

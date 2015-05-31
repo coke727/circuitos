@@ -44,15 +44,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity_Ejercicio4"
-            android:label="Ejercicio 4" >
-            <intent-filter>
-                <action android:name="ejercicio4" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".Activity_teoria"
             android:label="Teoria de Circuitos" >
             <intent-filter>
