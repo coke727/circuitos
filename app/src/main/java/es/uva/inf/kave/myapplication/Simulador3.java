@@ -53,10 +53,10 @@ public class Simulador3 extends Fragment{
         medir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                r1 = ((EditText) getView().findViewById(R.id.r1)).getText().toString();
+                r1 = ((EditText) getView().findViewById(R.id.v2)).getText().toString();
                 r2 = ((EditText) getView().findViewById(R.id.r2)).getText().toString();
                 v1 = ((EditText) getView().findViewById(R.id.v1)).getText().toString();
-                v2 = ((EditText) getView().findViewById(R.id.v2)).getText().toString();
+                v2 = ((EditText) getView().findViewById(R.id.r1)).getText().toString();
                 Datos fila = new Datos(r1,r2,v1,v2);
                 tabla.add(fila);
                 adapter.notifyDataSetChanged();

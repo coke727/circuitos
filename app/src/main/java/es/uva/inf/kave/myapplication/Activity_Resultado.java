@@ -8,6 +8,8 @@ import android.view.View;
 import java.util.ArrayList;
 
 import es.uva.inf.kave.myapplication.Auxiliares.Datos;
+import es.uva.inf.kave.myapplication.Auxiliares.Operacion;
+import es.uva.inf.kave.myapplication.Auxiliares.Regresion;
 
 /**
  * Created by coke on 27/05/15.
@@ -19,6 +21,8 @@ public class Activity_Resultado extends Activity{
     private TextView campo1, campo2, campo3, campo4, campo5;
     private ArrayList<Datos> datos;
     private int ejercicio;
+    private Regresion regresion;
+    private double tmp;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -57,16 +61,31 @@ public class Activity_Resultado extends Activity{
                 ohm2.setText("");
                 mas2.setText("");
                 asig2.setText("");
-                //Casting de los datos a Double --> creados getters de r1 y v1 que devuelven el valor en double --> getDoubleR1 y getDoubleV1
-                //hacer calculos ejercicio 1
-                //Introducir los resultados en las variables de arriba mediante <<Var>>.setText(valor que queremos que aparezca en pantalla en forma de string)
+                regresion = new Regresion(datos);
+                pendiente.setText(""+regresion.a);
+                ordenada.setText(""+regresion.b);
+                correlacion.setText(""+regresion.correlacion());
+                rx1.setText(""+regresion.a);
+                tmp = regresion.errorPendiente();
+                rx2.setText(""+tmp);
+                errorPendiente.setText(""+tmp);
+                errorOrdenada.setText(""+regresion.errorOrdenada());
                 break;
             case 2:
-                //Casting de los datos a Double --> creados getters de r1 y v1 que devuelven el valor en double --> getDoubleR1 y getDoubleV1
-                //hacer calculos ejercicio 2
-                //Introducir los resultados en las variables de arriba mediante <<Var>>.setText(valor que queremos que aparezca en pantalla en forma de string)
+                regresion = new Regresion(datos);
+                pendiente.setText(""+regresion.a);
+                ordenada.setText(""+regresion.b);
+                correlacion.setText(""+regresion.correlacion());
+                rx1.setText(""+regresion.a);
+                tmp = regresion.errorPendiente();
+                rx2.setText(""+tmp);
+                errorPendiente.setText(""+tmp);
+                errorOrdenada.setText(""+regresion.errorOrdenada());
+                rteo1.setText(""+Operacion.requivalente(datos.get(0).getDoubleR2(), datos.get(0).getDoubleR3(), datos.get(0).getDoubleR4(), datos.get(0).getDoubleR5(), datos.get(0).getDoubleR1()));
+                rteo2.setText(""+Regresion.error);
                 break;
             case 3:
+                regresion = new Regresion(datos);
                 encabezado2.setText("Resistencia de la Bombilla a T_Ambiente:");
                 asig2.setText("R_bombilla = ");
                 campo1.setText("R0 = ");
@@ -79,14 +98,15 @@ public class Activity_Resultado extends Activity{
                 encabezado1.setText("Tempertura Ambiente:");
                 correlacion.setText("");
                 //Meter valo R0 en campo pendiente // Error R0 en error pendiente // error R en ordenada // error T en error ordenada
-                //Casting de los datos a Double --> creados getters de r1 y v1 que devuelven el valor en double --> getDoubleR1 y getDoubleV1
-                //hacer calculos ejercicio 3
-                //Introducir los resultados en las variables de arriba mediante <<Var>>.setText(valor que queremos que aparezca en pantalla en forma de string)
-                break;
-            case 4:
-                //Casting de los datos a Double --> creados getters de r1 y v1 que devuelven el valor en double --> getDoubleR1 y getDoubleV1
-                //hacer calculos ejercicio 4
-                //Introducir los resultados en las variables de arriba mediante <<Var>>.setText(valor que queremos que aparezca en pantalla en forma de string)
+                pendiente.setText(""+ Operacion.rcero(datos));
+                errorPendiente.setText(""+Operacion.errorRcero(datos));
+                double mediaTmp = Operacion.mediaTemp(datos);
+                rx1.setText(""+mediaTmp);
+                rx2.setText(Operacion.errorMedida(mediaTmp));
+                rteo1.setText(""+regresion.a);
+                rteo2.setText(""+regresion.errorPendiente());
+                ordenada.setText(""+regresion.errorPendiente());
+                errorOrdenada.setText(Operacion.errorMedida(mediaTmp));
                 break;
         }
     }

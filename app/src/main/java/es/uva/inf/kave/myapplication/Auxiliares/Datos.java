@@ -49,5 +49,5 @@ public class Datos implements Serializable {
 
 	public Double getDoubleR4() { return Double.parseDouble(r4); }
 
-	public Double getDoubleR5() { return Double.parseDouble(r4); }
+	public Double getDoubleR5() { return Double.parseDouble(r5); }
 }
