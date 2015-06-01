@@ -1,7 +1,7 @@
 package es.uva.inf.kave.myapplication;
 
 /**
- * Created by coke on 12/05/15.
+ * Created by Kave on 12/05/15.
  */
 
 import android.content.Intent;
@@ -22,7 +22,7 @@ import es.uva.inf.kave.myapplication.Auxiliares.ListAdapter1;
 
 public class Simulador extends Fragment{
 
-    private String r1, r2, r3, v1, v2, v3;
+    private String a1, v1;
     private Button medir;
     private Button deshacer;
     private Button limpiar, calcular;
@@ -52,12 +52,10 @@ public class Simulador extends Fragment{
         medir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                r1 = ((EditText) getView().findViewById(R.id.r1)).getText().toString();
-
+                a1 = ((EditText) getView().findViewById(R.id.a1)).getText().toString();
                 v1 = ((EditText) getView().findViewById(R.id.v1)).getText().toString();
 
-
-                Datos fila = new Datos(r1,v1);
+                Datos fila = new Datos(a1,v1);
                 tabla.add(fila);
                 adapter.notifyDataSetChanged();
                 scroll.computeScroll();
@@ -77,10 +75,8 @@ public class Simulador extends Fragment{
         limpiar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((EditText) getView().findViewById(R.id.r1)).setText("");
-
+                ((EditText) getView().findViewById(R.id.a1)).setText("");
                 ((EditText) getView().findViewById(R.id.v1)).setText("");
-
             }
         });
 

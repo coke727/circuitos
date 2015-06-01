@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * Created by coke on 27/05/15.
+ * Created by Kave on 27/05/15.
  */
 public class Activity_teoria extends Activity{
 

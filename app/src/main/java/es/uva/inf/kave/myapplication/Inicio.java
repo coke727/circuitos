@@ -1,7 +1,7 @@
 package es.uva.inf.kave.myapplication;
 
 /**
- * Created by coke on 12/05/15.
+ * Created by Kave on 12/05/15.
  */
 
 import android.support.v4.app.Fragment;

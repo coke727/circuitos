@@ -1,13 +1,12 @@
 package es.uva.inf.kave.myapplication;
 
 /**
- * Created by coke on 12/05/15.
+ * Created by Lucas on 12/05/15.
  */
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +22,7 @@ import es.uva.inf.kave.myapplication.Auxiliares.ListAdapter;
 
 public class Simulador3 extends Fragment{
 
-    private String r1, r2, v1, v2;
+    private String r1, t1, a1, v1;
     private Button medir;
     private Button deshacer;
     private Button limpiar, calcular;
@@ -53,11 +52,11 @@ public class Simulador3 extends Fragment{
         medir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                r1 = ((EditText) getView().findViewById(R.id.v2)).getText().toString();
-                r2 = ((EditText) getView().findViewById(R.id.r2)).getText().toString();
+                r1 = ((EditText) getView().findViewById(R.id.r1)).getText().toString();
+                t1 = ((EditText) getView().findViewById(R.id.t1)).getText().toString();
+                a1 = ((EditText) getView().findViewById(R.id.a1)).getText().toString();
                 v1 = ((EditText) getView().findViewById(R.id.v1)).getText().toString();
-                v2 = ((EditText) getView().findViewById(R.id.r1)).getText().toString();
-                Datos fila = new Datos(r1,r2,v1,v2);
+                Datos fila = new Datos(r1,t1,a1,v1);
                 tabla.add(fila);
                 adapter.notifyDataSetChanged();
                 scroll.computeScroll();
@@ -78,9 +77,9 @@ public class Simulador3 extends Fragment{
             @Override
             public void onClick(View view) {
                 ((EditText) getView().findViewById(R.id.r1)).setText("");
-                ((EditText) getView().findViewById(R.id.r2)).setText("");
+                ((EditText) getView().findViewById(R.id.t1)).setText("");
+                ((EditText) getView().findViewById(R.id.a1)).setText("");
                 ((EditText) getView().findViewById(R.id.v1)).setText("");
-                ((EditText) getView().findViewById(R.id.v2)).setText("");
             }
         });
 

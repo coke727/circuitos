@@ -58,4 +58,36 @@
         de su temperatura (ecuación 2), para diferentes puntos (V,I) obtenidos experimentalmente.
     </string>
 
+    <string name="TeoriaGeneral">
+        \n
+        MATERIAL\n\n
+            \t- Fuente de alimentación de corriente continua\n
+            \t- Voltímetro\n
+            \t- Amperímetro\n
+            \t- Resistencia óhmica de valor desconocido (R x )\n
+            \t- Cinco resistencias óhmicas de valor conocido\n
+            \t- Resistencia PTC\n
+            \t- Bombilla de incandescencia\n
+            \t- Plataforma de conexiones\n
+            \t- Cables y puentes de unión\n
+        \n
+        FUNDAMENTO TEÓRICO\n\n
+            \tSe dice que un conductor es óhmico o lineal si la diferencia de
+            potencial V entre sus extremos es directamente proporcional a
+            la intensidad I que circula a través de él, siendo la constante de
+            proporcionalidad independientemente del valor de la intensidad
+            de la corriente. Dicha constante de proporcionalidad se
+            denomina resistencia R del conductor, y en el Sistema
+            Internacional se expresa en ohmios (Ω). La ley de Ohm se
+            expresa matemáticamente como:\n
+\n
+             \t\t   V = I ⋅ R\n
+\n
+            \tLa resistencia de los materiales óhmicos depende del tipo de material, de su forma y tamaño, así como
+            de su temperatura, pero no de la intensidad de la corriente que circule a través de ellos.
+            Existen materiales cuya resistencia, obtenida como R=V/I, no es constante y depende de la intensidad
+            I. Estos materiales se denominan no-óhmicos. En la figura 1 se puede ver una representación de un
+            comportamiento óhmico y un caso particular de comportamiento no-óhmico.\n
+    </string>
+
 </resources>

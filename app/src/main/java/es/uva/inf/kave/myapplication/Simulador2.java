@@ -1,7 +1,7 @@
 package es.uva.inf.kave.myapplication;
 
 /**
- * Created by coke on 12/05/15.
+ * Created by Kave on 12/05/15.
  */
 
 import android.content.Intent;
@@ -24,7 +24,7 @@ import es.uva.inf.kave.myapplication.Auxiliares.ListAdapter2;
 
 public class Simulador2 extends Fragment{
 
-    private String r1, r2, r3,r4,r5, v1, v2;
+    private String r1, r2, r3,r4,r5, v1, a1;
     private Button medir;
     private Button deshacer;
     private Button limpiar;
@@ -56,17 +56,17 @@ public class Simulador2 extends Fragment{
         medir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                r1 = ((EditText) getView().findViewById(R.id.r6)).getText().toString();
+                r1 = ((EditText) getView().findViewById(R.id.r1)).getText().toString();
                 r2 = ((EditText) getView().findViewById(R.id.r2)).getText().toString();
                 r3 = ((EditText) getView().findViewById(R.id.r3)).getText().toString();
                 r4 = ((EditText) getView().findViewById(R.id.r4)).getText().toString();
                 r5 = ((EditText) getView().findViewById(R.id.r5)).getText().toString();
                 v1 = ((EditText) getView().findViewById(R.id.v1)).getText().toString();
-                v2 = ((EditText) getView().findViewById(R.id.r1)).getText().toString();
+                a1 = ((EditText) getView().findViewById(R.id.a1)).getText().toString();
 
-                Datos fila = new Datos(r1, v1);
+                Datos fila = new Datos(a1, v1);
                 tabla.add(fila);
-                Datos muestra = new Datos(r1,r2,r3,r4,r5,v1,v2);
+                Datos muestra = new Datos(r1,r2,r3,r4,r5,v1,a1);
                 datos.add(muestra);
                 adapter.notifyDataSetChanged();
                 scroll.computeScroll();
@@ -76,7 +76,7 @@ public class Simulador2 extends Fragment{
         deshacer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(tabla.size()>0) {
+                if(tabla.size()>0 && datos.size()>0) {
                     tabla.remove(tabla.get(tabla.size() - 1));
                     datos.remove(datos.get(tabla.size() - 1));
                     adapter.notifyDataSetChanged();
@@ -87,7 +87,7 @@ public class Simulador2 extends Fragment{
         limpiar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((EditText) getView().findViewById(R.id.r1)).setText("");
+                ((EditText) getView().findViewById(R.id.a1)).setText("");
                 ((EditText) getView().findViewById(R.id.v1)).setText("");
             }
         });
@@ -96,7 +96,7 @@ public class Simulador2 extends Fragment{
             @Override
             public void onClick(View view) {
                 intent = new Intent(getActivity(),Activity_Resultado.class);
-                intent.putExtra("array", tabla);
+                intent.putExtra("array", datos);
                 intent.putExtra("ejercicio", 2);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);

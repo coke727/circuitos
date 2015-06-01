@@ -30,7 +30,7 @@
                 android:id="@+id/imgCircuito"
                 android:layout_gravity="center_horizontal"
                 android:adjustViewBounds="false"
-                android:src="@drawable/imc_circuito"
+                android:src="@drawable/prob1_1"
                 android:contentDescription="@string/alt_circuito" />
 
             <TextView
@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
                     android:ems="10"
-                    android:id="@+id/v2"
+                    android:id="@+id/a1"
                     android:hint="I" />
 
             </LinearLayout>
@@ -90,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
                     android:ems="10"
-                    android:id="@+id/r2"
+                    android:id="@+id/t1"
                     android:hint="T" />
 
             </LinearLayout>

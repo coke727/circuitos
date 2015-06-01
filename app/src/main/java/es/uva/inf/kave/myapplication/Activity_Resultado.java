@@ -12,7 +12,7 @@ import es.uva.inf.kave.myapplication.Auxiliares.Operacion;
 import es.uva.inf.kave.myapplication.Auxiliares.Regresion;
 
 /**
- * Created by coke on 27/05/15.
+ * Created by Lucas on 27/05/15.
  */
 public class Activity_Resultado extends Activity{
 
@@ -62,6 +62,7 @@ public class Activity_Resultado extends Activity{
                 mas2.setText("");
                 asig2.setText("");
                 regresion = new Regresion(datos);
+                regresion.lineal();
                 pendiente.setText(""+regresion.a);
                 ordenada.setText(""+regresion.b);
                 correlacion.setText(""+regresion.correlacion());
@@ -73,6 +74,7 @@ public class Activity_Resultado extends Activity{
                 break;
             case 2:
                 regresion = new Regresion(datos);
+                regresion.lineal();
                 pendiente.setText(""+regresion.a);
                 ordenada.setText(""+regresion.b);
                 correlacion.setText(""+regresion.correlacion());
@@ -81,11 +83,12 @@ public class Activity_Resultado extends Activity{
                 rx2.setText(""+tmp);
                 errorPendiente.setText(""+tmp);
                 errorOrdenada.setText(""+regresion.errorOrdenada());
-                rteo1.setText(""+Operacion.requivalente(datos.get(0).getDoubleR2(), datos.get(0).getDoubleR3(), datos.get(0).getDoubleR4(), datos.get(0).getDoubleR5(), datos.get(0).getDoubleR1()));
+                rteo1.setText(""+Operacion.requivalente(datos.get(0).getDoubleR1(), datos.get(0).getDoubleR2(), datos.get(0).getDoubleR3(), datos.get(0).getDoubleR4(), datos.get(0).getDoubleR5()));
                 rteo2.setText(""+Regresion.error);
                 break;
             case 3:
                 regresion = new Regresion(datos);
+                regresion.lineal();
                 encabezado2.setText("Resistencia de la Bombilla a T_Ambiente:");
                 asig2.setText("R_bombilla = ");
                 campo1.setText("R0 = ");

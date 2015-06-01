@@ -24,7 +24,7 @@ import java.util.ArrayList;
         double sumatorio = 0 ;
         int size = datos.size();
         for(int i = 0; i<size;i++){
-            sumatorio = sumatorio + resistencia(datos.get(i).getDoubleR1(), datos.get(i).getDoubleV1());
+            sumatorio = sumatorio + resistencia(datos.get(i).getDoubleA1(), datos.get(i).getDoubleV1());
         }
         return sumatorio/datos.size();
     }
@@ -37,7 +37,7 @@ import java.util.ArrayList;
         double sumatorio = 0 ;
         int size = datos.size();
         for(int i = 0; i<size;i++){
-            sumatorio = sumatorio + rcero(datos.get(i).getDoubleR1(), datos.get(i).getDoubleR2());
+            sumatorio = sumatorio + rcero(datos.get(i).getDoubleR1(), datos.get(i).getDoubleT1());
         }
         return sumatorio/datos.size();
     }
@@ -76,7 +76,7 @@ import java.util.ArrayList;
         double sumatorio = 0 ;
         int size = datos.size();
         for(int i = 0; i<size;i++){
-            sumatorio = sumatorio + errorRcero(datos.get(i).getDoubleR1(),datos.get(i).getDoubleR2());
+            sumatorio = sumatorio + errorRcero(datos.get(i).getDoubleR1(),datos.get(i).getDoubleT1());
         }
         return sumatorio/datos.size();
     }
@@ -85,7 +85,7 @@ import java.util.ArrayList;
         double sumatorio = 0 ;
         int size = datos.size();
         for(int i = 0; i<size;i++){
-            sumatorio = sumatorio + datos.get(i).getDoubleR2();
+            sumatorio = sumatorio + datos.get(i).getDoubleT1();
         }
         return sumatorio/datos.size();
     }

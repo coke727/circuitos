@@ -51,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
                     android:ems="10"
-                    android:id="@+id/r1"
+                    android:id="@+id/a1"
                     android:hint="I" />
 
             </LinearLayout>

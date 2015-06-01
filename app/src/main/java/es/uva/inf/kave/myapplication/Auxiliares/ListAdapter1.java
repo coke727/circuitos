@@ -38,9 +38,7 @@ public class ListAdapter1 extends ArrayAdapter<Datos> {
 
             holder = new DatosHolder();
             holder.v1 = (TextView) row.findViewById(R.id.tv1);
-
-            holder.r1 = (TextView) row.findViewById(R.id.tr1);
-
+            holder.a1 = (TextView) row.findViewById(R.id.tr1);
 
             row.setTag(holder);
         }
@@ -50,11 +48,8 @@ public class ListAdapter1 extends ArrayAdapter<Datos> {
         }
 
         Datos fila = datos.get(position);
-
         holder.v1.setText(fila.getV1());
-
-        holder.r1.setText(fila.getR1());
-
+        holder.a1.setText(fila.getA1());
 
         return row;
     }
@@ -62,8 +57,6 @@ public class ListAdapter1 extends ArrayAdapter<Datos> {
     static class DatosHolder
     {
         TextView v1;
-
-        TextView r1;
-
+        TextView a1;
     }
 }
